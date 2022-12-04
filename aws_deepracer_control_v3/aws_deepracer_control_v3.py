@@ -4,7 +4,7 @@ import logging
 # import time
 
 import requests
-from requests_toolbelt.multipart.encoder import MultipartEncoder
+#from requests_toolbelt.multipart.encoder import MultipartEncoder
 from bs4 import BeautifulSoup
 import urllib3
 
@@ -106,21 +106,21 @@ class Client:
         model_url = "api/models/" + model_name + "/model"
         return self._put(model_url, null)
 
-    def upload_model(self, model_zip_path, model_name):
-        model_file = open(model_zip_path, "rb")
-        headers = self.headers
-        multipart_data = MultipartEncoder(
-            fields={
-                # a file upload field
-                "file": (model_name, model_file, None)
-            }
-        )
-        headers["content-type"] = multipart_data.content_type
-        upload_models_url = self.URL + "/api/uploadModels"
-
-        return self.session.put(
-            upload_models_url, data=multipart_data, headers=headers, verify=False
-        )
+    #def upload_model(self, model_zip_path, model_name):
+    #    model_file = open(model_zip_path, "rb")
+    #    headers = self.headers
+    #    multipart_data = MultipartEncoder(
+    #        fields={
+    #            # a file upload field
+    #            "file": (model_name, model_file, None)
+    #        }
+    #    )
+    #    headers["content-type"] = multipart_data.content_type
+    #    upload_models_url = self.URL + "/api/uploadModels"
+    #
+    #    return self.session.put(
+    #        upload_models_url, data=multipart_data, headers=headers, verify=False
+    #    )
 
     # calibration
 
