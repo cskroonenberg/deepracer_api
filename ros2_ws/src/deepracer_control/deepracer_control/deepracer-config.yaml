@@ -1,0 +1,16 @@
+ip: 10.108.94.89
+password: cDrUXbNq
+calibration:
+  angle:
+    # max = turn left, min = turn right
+    max: 30
+    mid: 0
+    min: -30
+    polarity: 1
+
+  throttle:
+    # max = reverse max speed, mid = zero speed, min = forward max speed
+    max: 20
+    mid: 0
+    min: -20
+    polarity: 1

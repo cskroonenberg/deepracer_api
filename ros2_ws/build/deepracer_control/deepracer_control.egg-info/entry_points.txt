@@ -1,0 +1,3 @@
+[console_scripts]
+my_node = deepracer_control.my_node:main
+
